@@ -8,6 +8,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +18,8 @@ class _HomeState extends State<Home> {
           Icons.edit
           ),
         backgroundColor: Colors.black,
+
+
       ),
       body: Center(
         child: Column(
@@ -50,26 +53,40 @@ class _HomeState extends State<Home> {
               color : Colors.white,
             )
             ),
-            Container(
-              color : Colors.grey,
-              padding : EdgeInsets.all(30.0),
-              margin: EdgeInsets.all(20.0),
-              child : Text('Gaming'),
+            SizedBox(height: 50.0),
+            Row(
+              children:<Widget>[
+                SizedBox(width : 10.0),
+                CircleAvatar(
+                backgroundColor : Colors.grey,
+                radius : 68.0,
+                child : Text('Gaming',
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),),
+              ),
+              SizedBox(width: 90.0),
+              CircleAvatar(
+                radius : 68.0,
+                backgroundColor : Colors.grey,
+                child : Text('Sports',
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+             ]
             ),
-            Container(
-              color : Colors.grey,
-              padding : EdgeInsets.all(30.0),
-              margin: EdgeInsets.all(20.0),
-              child : Text('Sports'),
+          SizedBox(height: 40.0),
+            CircleAvatar(
+              radius: 68.0,
+              backgroundColor: Colors.grey,
+              child : Text('Dancing',
+              style: TextStyle(
+                color: Colors.black,
+              ),
+              ),
             ),
-            Container(
-              color : Colors.grey,
-              padding : EdgeInsets.all(30.0),
-              margin: EdgeInsets.all(20.0),
-              child : Text('Dancing'),
-            ),
-
-
           ],
         ),
       ),
