@@ -8,14 +8,30 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  @override
+  void initState() {
+
+    super.initState();
+  }
+
+
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
       appBar: AppBar(
-          title: Icon(
-          Icons.edit
+          title: Padding(
+            padding: const EdgeInsets.only(left : 330.0),
+            child: IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/Details');
+              },
+              icon: Icon(
+              Icons.edit
+              ),
+            ),
           ),
         backgroundColor: Colors.black,
 
