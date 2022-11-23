@@ -1,6 +1,10 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:my_first_app/pages/p1.dart';
 import 'package:my_first_app/pages/p2.dart';
+
+
 
 
 
@@ -9,5 +13,6 @@ home: Home(),
   routes: {
   '/home' : (context) => Home(),
     '/Details' : (context) => Details(),
+
   },
 ));

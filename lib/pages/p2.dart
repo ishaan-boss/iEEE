@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/pages/p1.dart';
 
-class Details extends StatefulWidget {
+
+class Details extends StatelessWidget {
+
+  TextEditingController textFieldController = TextEditingController();
 
 
-  @override
-  State<Details> createState() => _DetailsState();
-}
-
-class _DetailsState extends State<Details> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.black,
       appBar: AppBar(
       backgroundColor: Colors.black,
@@ -47,9 +47,10 @@ class _DetailsState extends State<Details> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      hintText: 'Name',
+                      labelText: 'Name',
                       fillColor: Colors.white,
                     ),
+                    controller: textFieldController,
                   ),
                 ),
               ),
@@ -75,6 +76,7 @@ class _DetailsState extends State<Details> {
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
                   child: TextField(
+
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       hintText: 'Hobby 1',
@@ -103,6 +105,7 @@ class _DetailsState extends State<Details> {
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
                   child: TextField(
+
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       hintText: 'Hobby 3',
@@ -115,7 +118,13 @@ class _DetailsState extends State<Details> {
               Padding(
                 padding: const EdgeInsets.only(left : 100.0, right: 100.0),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+                      return Home( );
+                    }),
+                    );
+                  },
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.white,
                   ),
